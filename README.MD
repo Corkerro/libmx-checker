@@ -20,4 +20,4 @@ libmx.a
 ###### To run in error-only display mode:
 
 
-    ./alice -mode=errors**
+    ./alice -mode=errors
