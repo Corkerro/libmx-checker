@@ -28,6 +28,10 @@ void check_mx_print_unicode(void);
 void check_mx_print_strarr(void);
 void check_mx_printint(void);
 void check_mx_pow(void);
+void check_mx_sqrt(void);
+void check_mx_nbr_to_hex(void);
+void check_mx_hex_to_nbr(void);
+void check_mx_itoa(void);
 void check_utils(void);
 
 
