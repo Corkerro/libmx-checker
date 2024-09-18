@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <assert.h>
 #include <sys/stat.h>
+#include <math.h>
 
 typedef enum {
     SHOW_ALL,
@@ -26,7 +27,8 @@ void check_mx_printstr(void);
 void check_mx_print_unicode(void);
 void check_mx_print_strarr(void);
 void check_mx_printint(void);
-void check_strings(void);
+void check_mx_pow(void);
+void check_utils(void);
 
 
 #endif //HEADER_H

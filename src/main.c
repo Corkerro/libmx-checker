@@ -5,7 +5,7 @@ int error_count = 0; // Изначально количество ошибок �
 
 int main(int argc, char **argv) {
     parse_args(argc, argv);
-    check_strings();
+    check_utils();
 
     // Показываем количество ошибок, если их больше нуля
     printf("\n\n");
