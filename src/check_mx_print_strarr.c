@@ -33,7 +33,7 @@ void check_mx_print_strarr(void) {
 
     // Тест 1: Проверяем вывод массива строк с разделителем ", "
     capture_output(output, sizeof(output), test_case_1);
-    if (strcmp(output, "Hello, World, Test") == 0) {
+    if (strcmp(output, "Hello, World, Test\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 1 passed: Hello, World, Test\n");
     } else {
         if (is_print == 0) printf("check_mx_print_strarr:\n");
@@ -46,7 +46,7 @@ void check_mx_print_strarr(void) {
 
     // Тест 2: Проверяем вывод массива строк с разделителем " | "
     capture_output(output, sizeof(output), test_case_2);
-    if (strcmp(output, "One | Two | Three") == 0) {
+    if (strcmp(output, "One | Two | Three\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 2 passed: One | Two | Three\n");
     } else {
         if (is_print == 0) printf("check_mx_print_strarr:\n");
@@ -59,7 +59,7 @@ void check_mx_print_strarr(void) {
 
     // Тест 3: Проверяем вывод массива строк с одним элементом и разделителем "; "
     capture_output(output, sizeof(output), test_case_3);
-    if (strcmp(output, "Single") == 0) {
+    if (strcmp(output, "Single\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 3 passed: Single\n");
     } else {
         if (is_print == 0) printf("check_mx_print_strarr:\n");
@@ -72,7 +72,7 @@ void check_mx_print_strarr(void) {
 
     // Тест 4: Проверяем вывод пустого массива
     capture_output(output, sizeof(output), test_case_4);
-    if (strcmp(output, "") == 0) {
+    if (strcmp(output, "\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 4 passed: <empty>\n");
     } else {
         if (is_print == 0) printf("check_mx_print_strarr:\n");
