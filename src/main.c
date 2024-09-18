@@ -1,6 +1,6 @@
 #include "../inc/header.h"
 
-DisplayMode mode = SHOW_ALL; // По умолчанию отображаем только ошибки
+e_display_mode mode = SHOW_ALL; // По умолчанию отображаем только ошибки
 int error_count = 0; // Изначально количество ошибок равно 0
 
 int main(int argc, char **argv) {

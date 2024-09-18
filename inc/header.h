@@ -13,9 +13,9 @@
 typedef enum {
     SHOW_ALL,
     SHOW_ERRORS
-} DisplayMode;
+} e_display_mode;
 
-extern DisplayMode mode;
+extern e_display_mode mode;
 extern int error_count;
 
 void parse_args(int argc, char *argv[]);
@@ -32,6 +32,10 @@ void check_mx_sqrt(void);
 void check_mx_nbr_to_hex(void);
 void check_mx_hex_to_nbr(void);
 void check_mx_itoa(void);
+void check_mx_foreach(void);
+void check_mx_binary_search(void);
+void check_mx_bubble_sort(void);
+void check_mx_quicksort(void);
 void check_utils(void);
 
 
