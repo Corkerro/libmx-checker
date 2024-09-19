@@ -5,7 +5,9 @@ int error_count = 0; // Изначально количество ошибок �
 
 int main(int argc, char **argv) {
     parse_args(argc, argv);
+
     check_utils();
+    check_string();
 
     // Показываем количество ошибок, если их больше нуля
     printf("\n\n");
@@ -20,6 +22,7 @@ int main(int argc, char **argv) {
 
 // Функция для захвата вывода
 void capture_output(char *buffer, size_t size, void (*test_func)(void)) {
+    fflush(stdout);
     int saved_stdout = dup(STDOUT_FILENO); // Сохраняем стандартный вывод
     int temp_fd = open("temp_output.txt", O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 

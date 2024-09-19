@@ -38,5 +38,11 @@ void check_mx_bubble_sort(void);
 void check_mx_quicksort(void);
 void check_utils(void);
 
+void check_mx_strlen(void);
+void check_mx_swap_char(void);
+void check_mx_str_reverse(void);
+void check_mx_strdel(void);
+void check_string(void);
+
 
 #endif //HEADER_H

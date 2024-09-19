@@ -8,7 +8,7 @@ static void print_array(char **arr, int size) {
     printf("\n");
 }
 
-void test_case_1(void) {
+static void test_case_1(void) {
     char *arr[] = {"abc", "xyz", "ghi", "def"};
     int size = 4;
 
@@ -17,7 +17,7 @@ void test_case_1(void) {
     print_array(arr, size);
 }
 
-void test_case_2(void) {
+static void test_case_2(void) {
     char *arr[] = {"abc", "acb", "a"};
     int size = 3;
 
