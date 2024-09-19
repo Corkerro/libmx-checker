@@ -42,6 +42,13 @@ void check_mx_strlen(void);
 void check_mx_swap_char(void);
 void check_mx_str_reverse(void);
 void check_mx_strdel(void);
+void check_mx_del_strarr(void);
+void check_mx_get_char_index(void);
+void check_mx_strdup(void);
+void check_mx_strndup(void);
+void check_mx_strcpy(void);
+void check_mx_strncpy(void);
+void check_mx_strcmp(void);
 void check_string(void);
 
 
