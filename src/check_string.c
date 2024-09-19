@@ -12,4 +12,11 @@ void check_string(void) {
     check_mx_strcpy();
     check_mx_strncpy();
     check_mx_strcmp();
+    check_mx_strcat();
+    check_mx_strstr();
+    check_mx_get_substr_index();
+    check_mx_count_substr();
+    check_mx_count_words();
+    check_mx_strnew();
+    check_mx_strtrim();
 }

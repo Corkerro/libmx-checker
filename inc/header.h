@@ -49,6 +49,13 @@ void check_mx_strndup(void);
 void check_mx_strcpy(void);
 void check_mx_strncpy(void);
 void check_mx_strcmp(void);
+void check_mx_strcat(void);
+void check_mx_strstr(void);
+void check_mx_get_substr_index(void);
+void check_mx_count_substr(void);
+void check_mx_count_words(void);
+void check_mx_strnew(void);
+void check_mx_strtrim(void);
 void check_string(void);
 
 
