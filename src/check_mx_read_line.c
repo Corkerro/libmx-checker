@@ -15,6 +15,7 @@ static void test_case_2(void) {
     int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
     char *str = NULL;
     mx_read_line(&str, 7, '\n', fd); // Пропускаем первую строку
+    free(str);
     int res = mx_read_line(&str, 35, 'a', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 34, "//ON COMPUTER SCREEN\n//\nso close it h"
     free(str);
@@ -26,6 +27,7 @@ static void test_case_3(void) {
     int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
     char *str = NULL;
     mx_read_line(&str, 35, 'a', fd); // Пропускаем до второго чтения
+    free(str);
     int res = mx_read_line(&str, 1, '.', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 15, "s no boundaries"
     free(str);
@@ -37,7 +39,9 @@ static void test_case_4(void) {
     int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
     char *str = NULL;
     mx_read_line(&str, 35, 'a', fd); // Пропускаем до второго чтения
+    free(str);
     mx_read_line(&str, 1, '.', fd); // Пропускаем до третьего чтения
+    free(str);
     int res = mx_read_line(&str, 10, '\n', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 0, ""
     free(str);

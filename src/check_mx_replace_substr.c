@@ -47,7 +47,7 @@ void check_mx_replace_substr(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strcmp(output, "Resu1lt: 'McDonuts'\n") == 0) {
+    if (strcmp(output, "Result: 'McDonuts'\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (!is_print) printf("check_mx_replace_substr:\n");
