@@ -19,4 +19,10 @@ void check_string(void) {
     check_mx_count_words();
     check_mx_strnew();
     check_mx_strtrim();
+    check_mx_del_extra_spaces();
+    check_mx_strsplit();
+    check_mx_strjoin();
+    check_mx_file_to_str();
+    check_mx_replace_substr();
+    check_mx_read_line();
 }

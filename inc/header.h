@@ -56,6 +56,12 @@ void check_mx_count_substr(void);
 void check_mx_count_words(void);
 void check_mx_strnew(void);
 void check_mx_strtrim(void);
+void check_mx_del_extra_spaces(void);
+void check_mx_strsplit(void);
+void check_mx_strjoin(void);
+void check_mx_file_to_str(void);
+void check_mx_replace_substr(void);
+void check_mx_read_line(void);
 void check_string(void);
 
 
