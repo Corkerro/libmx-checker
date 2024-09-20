@@ -13,11 +13,14 @@ static void test_case_1(void) {
 // Тестовая функция 2: Уменьшение размера
 static void test_case_2(void) {
     char *ptr = malloc(12);
-    strcpy(ptr, "Hello World");
-    char *new_ptr = mx_realloc(ptr, 6);
-    printf("Result: '%s'\n", new_ptr); // Ожидаем "Hello World"
+    strcpy(ptr, "Hello World\0");
+    char *new_ptr = mx_realloc(ptr, 7);
+    if (new_ptr)
+        new_ptr[6] = '\0';
+    printf("Result: '%s'\n", new_ptr); // Ожидаем "Hello "
     free(new_ptr);
 }
+
 
 // Тестовая функция 3: Нулевой указатель
 static void test_case_3(void) {
@@ -58,11 +61,11 @@ void check_mx_realloc(void) {
 
     // Тест 2
     capture_output(output, sizeof(output), test_case_2);
-    if (strstr(output, "Result: 'Hello World'")) {
+    if (strstr(output, "Result: 'Hello '")) {
         if (mode == SHOW_ALL) printf("Test 2 passed: Decrease size\n");
     } else {
         if (!is_print) printf("check_mx_realloc:\n");
-        printf("Test 2 failed: Expected 'Result: 'Hello World'', got '%s'\n", output);
+        printf("Test 2 failed: Expected 'Result: 'Hello '', got '%s'\n", output);
         error_count++;
         loc_error_count++;
         is_print = 1;
