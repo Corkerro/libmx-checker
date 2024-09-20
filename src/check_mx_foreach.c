@@ -22,6 +22,11 @@ static void test_case_2(void) {
     mx_foreach(arr, 5, print_double);
 }
 
+// Тест 3: Проверка функции print_double
+static void test_case_3(void) {
+    mx_foreach(NULL, 5, print_double);
+}
+
 // Функция для проверки вывода
 void check_mx_foreach(void) {
     char output[100];
@@ -53,6 +58,19 @@ void check_mx_foreach(void) {
     } else {
         if (is_print == 0) printf("check_mx_foreach:\n");
         printf("Test 2 failed: Expected '2 4 6 8 10 ', got '%s'\n", output);
+
+        error_count++;
+        loc_error_count++;
+        is_print = 1;
+    }
+
+    // Тест 3: Проверяем NULL
+    capture_output(output, sizeof(output), test_case_3);
+    if (strcmp(output, "") == 0) {
+        if (mode == SHOW_ALL) printf("Test 3 passed: Null test\n");
+    } else {
+        if (is_print == 0) printf("check_mx_foreach:\n");
+        printf("Test 3 failed: Expected '', got '%s'\n", output);
 
         error_count++;
         loc_error_count++;

@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
 
     check_utils();
     check_string();
+    check_memory();
 
     // Показываем количество ошибок, если их больше нуля
     printf("\n\n");

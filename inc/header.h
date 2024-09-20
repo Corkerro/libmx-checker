@@ -64,5 +64,12 @@ void check_mx_replace_substr(void);
 void check_mx_read_line(void);
 void check_string(void);
 
+void check_mx_memset(void);
+void check_mx_memcpy(void);
+void check_mx_memccpy(void);
+void check_mx_memcmp(void);
+void check_mx_memchr(void);
+void check_mx_memrchr(void);
+void check_memory(void);
 
 #endif //HEADER_H
