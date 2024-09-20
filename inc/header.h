@@ -70,6 +70,9 @@ void check_mx_memccpy(void);
 void check_mx_memcmp(void);
 void check_mx_memchr(void);
 void check_mx_memrchr(void);
+void check_mx_memmem(void);
+void check_mx_memmove(void);
+void check_mx_realloc(void);
 void check_memory(void);
 
 #endif //HEADER_H

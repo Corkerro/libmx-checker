@@ -3,7 +3,7 @@
 // Тест 1: Копирование строки до символа остановки
 static void test_case_1(void) {
     char src[] = "Hello, world!";
-    char dst[20];
+    char dst[20] = {0};
     int *res = mx_memccpy(dst, src, ',', strlen(src) + 1);  // Ожидаем копирование до запятой
     printf("Destination: '%s', Return value: %p\n", dst, (void *)res);  // Ожидаем "Hello," в dst и не NULL в res
 }
