@@ -75,4 +75,13 @@ void check_mx_memmove(void);
 void check_mx_realloc(void);
 void check_memory(void);
 
+void check_mx_create_node(void);
+void check_mx_push_front(void);
+void check_mx_push_back(void);
+void check_mx_pop_front(void);
+void check_mx_pop_back(void);
+void check_mx_list_size(void);
+void check_mx_sort_list(void);
+void check_list(void);
+
 #endif //HEADER_H
