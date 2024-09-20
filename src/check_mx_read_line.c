@@ -1,59 +1,43 @@
 #include "../inc/header.h"
 
+static int fd; // Глобальный файловый дескриптор
+static char *str = NULL;
+
 // Тестовая функция 1: чтение строки до разделителя
 static void test_case_1(void) {
-    int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
-    char *str = NULL;
     int res = mx_read_line(&str, 7, '\n', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 8, "FADE IN:"
     free(str);
-    close(fd);
 }
 
 // Тестовая функция 2: чтение строки с другим разделителем
 static void test_case_2(void) {
-    int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
-    char *str = NULL;
-    mx_read_line(&str, 7, '\n', fd); // Пропускаем первую строку
-    free(str);
     int res = mx_read_line(&str, 35, 'a', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 34, "//ON COMPUTER SCREEN\n//\nso close it h"
     free(str);
-    close(fd);
 }
 
 // Тестовая функция 3: чтение с разделителем, который не встречается
 static void test_case_3(void) {
-    int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
-    char *str = NULL;
-    mx_read_line(&str, 35, 'a', fd); // Пропускаем до второго чтения
-    free(str);
     int res = mx_read_line(&str, 1, '.', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 15, "s no boundaries"
     free(str);
-    close(fd);
 }
 
 // Тестовая функция 4: чтение с небольшим буфером
 static void test_case_4(void) {
-    int fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
-    char *str = NULL;
-    mx_read_line(&str, 35, 'a', fd); // Пропускаем до второго чтения
-    free(str);
-    mx_read_line(&str, 1, '.', fd); // Пропускаем до третьего чтения
-    free(str);
     int res = mx_read_line(&str, 10, '\n', fd);
     printf("Result: %d, Line: '%s'\n", res, str);  // Ожидаем 0, ""
     free(str);
-    close(fd);
 }
 
 // Тестовая функция 5: ошибка чтения
 static void test_case_5(void) {
-    int fd = -1;  // Неверный дескриптор файла
-    char *str = NULL;
+    fd = -1;  // Неверный дескриптор файла
+    str = NULL;
     int res = mx_read_line(&str, 35, '\n', fd);
     printf("Result: %d\n", res);  // Ожидаем -2
+    free(str);
 }
 
 // Основная функция для проверки
@@ -66,6 +50,7 @@ void check_mx_read_line(void) {
         printf("check_mx_read_line:\n");
         is_print = 1;
     }
+    fd = open("./files_for_tests/check_mx_read_line/fragment", O_RDONLY);
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
@@ -126,6 +111,6 @@ void check_mx_read_line(void) {
 
         is_print = 1;
     }
-
+    close(fd);
     if (is_print) printf("\n");
 }
