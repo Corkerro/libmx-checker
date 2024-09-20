@@ -48,7 +48,7 @@ void check_mx_file_to_str(void) {
 
     // Тест 2
     capture_output(output, sizeof(output), test_case_2);
-    if (strcmp(output, "Result: (nil)\n") == 0) {
+    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_file_to_str:\n");

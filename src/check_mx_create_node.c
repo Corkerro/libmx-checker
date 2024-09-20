@@ -36,7 +36,7 @@ void check_mx_create_node(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strstr(output, "Node data: 42, Node next: (nil)") != NULL) {
+    if (strstr(output, "Node data: 42, Node next: (nil)") != NULL || strstr(output, "Node data: 42, Node next: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_create_node:\n");
@@ -48,7 +48,7 @@ void check_mx_create_node(void) {
 
     // Тест 2
     capture_output(output, sizeof(output), test_case_2);
-    if (strstr(output, "Node data: (nil), Node next: (nil)") != NULL) {
+    if (strstr(output, "Node data: (nil), Node next: (nil)") != NULL || strstr(output, "Node data: 0x0, Node next: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_create_node:\n");
@@ -60,7 +60,7 @@ void check_mx_create_node(void) {
 
     // Тест 3
     capture_output(output, sizeof(output), test_case_3);
-    if (strstr(output, "Node data: 3.14, Node next: (nil)") != NULL) {
+    if (strstr(output, "Node data: 3.14, Node next: (nil)") != NULL || strstr(output, "Node data: 3.14, Node next: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 3 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_create_node:\n");

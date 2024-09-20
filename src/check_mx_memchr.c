@@ -60,7 +60,7 @@ void check_mx_memchr(void) {
 
     // Тест 2: Поиск символа, который отсутствует
     capture_output(output, sizeof(output), test_case_2);
-    if (strstr(output, "Expected: (nil)") && strstr(output, "Got: (nil)")) {
+    if ((strstr(output, "Expected: (nil)") || strstr(output, "Expected: 0x0")) && (strstr(output, "Got: (nil)") || strstr(output, "Got: 0x0"))) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (!is_print) printf("check_mx_memchr:\n");
@@ -96,7 +96,7 @@ void check_mx_memchr(void) {
 
     // Тест 5: Поиск с NULL указателем
     capture_output(output, sizeof(output), test_case_5);
-    if (strstr(output, "Expected: (nil)") && strstr(output, "Got: (nil)")) {
+    if ((strstr(output, "Expected: (nil)") || strstr(output, "Expected: 0x0")) && (strstr(output, "Got: (nil)") || strstr(output, "Got: 0x0"))) {
         if (mode == SHOW_ALL) printf("Test 5 passed\n");
     } else {
         if (!is_print) printf("check_mx_memchr:\n");

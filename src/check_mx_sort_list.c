@@ -66,7 +66,7 @@ void check_mx_sort_list(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strcmp(output, "Sorted empty list: (nil)\n") == 0) {
+    if (strcmp(output, "Sorted empty list: (nil)\n") == 0 || strcmp(output, "Sorted empty list: 0x0\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_sort_list:\n");

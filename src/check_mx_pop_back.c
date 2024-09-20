@@ -50,7 +50,7 @@ void check_mx_pop_back(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strstr(output, "List after pop: (nil)") != NULL) {
+    if (strstr(output, "List after pop: (nil)") != NULL || strstr(output, "List after pop: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_pop_back:\n");
@@ -63,7 +63,7 @@ void check_mx_pop_back(void) {
     // Тест 2
     capture_output(output, sizeof(output), test_case_2);
     if (strstr(output, "First node data after pop: 42") != NULL &&
-        strstr(output, "Next node after pop: (nil)") != NULL) {
+        (strstr(output, "Next node after pop: (nil)") != NULL || strstr(output, "Next node after pop: 0x0") != NULL)) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_pop_back:\n");
@@ -75,7 +75,7 @@ void check_mx_pop_back(void) {
 
     // Тест 3
     capture_output(output, sizeof(output), test_case_3);
-    if (strstr(output, "List after pop from empty: (nil)") != NULL) {
+    if (strstr(output, "List after pop from empty: (nil)") != NULL || strstr(output, "List after pop from empty: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 3 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_pop_back:\n");

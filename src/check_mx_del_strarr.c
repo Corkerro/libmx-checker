@@ -43,7 +43,7 @@ void check_mx_del_strarr(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strcmp(output, "Result: (nil)\n") == 0) {
+    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_del_strarr:\n");
@@ -55,7 +55,7 @@ void check_mx_del_strarr(void) {
 
     // Тест 2
     capture_output(output, sizeof(output), test_case_2);
-    if (strcmp(output, "Result: (nil)\n") == 0) {
+    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_del_strarr:\n");
@@ -67,7 +67,7 @@ void check_mx_del_strarr(void) {
 
     // Тест 3
     capture_output(output, sizeof(output), test_case_3);
-    if (strcmp(output, "Result: (nil)\n") == 0) {
+    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 3 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_del_strarr:\n");

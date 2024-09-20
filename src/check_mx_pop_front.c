@@ -58,7 +58,7 @@ void check_mx_pop_front(void) {
 
     // Тест 1
     capture_output(output, sizeof(output), test_case_1);
-    if (strstr(output, "List after pop: (nil)") != NULL) {
+    if (strstr(output, "List after pop: (nil)") != NULL || strstr(output, "List after pop: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 1 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_pop_front:\n");
@@ -82,7 +82,7 @@ void check_mx_pop_front(void) {
 
     // Тест 3
     capture_output(output, sizeof(output), test_case_3);
-    if (strstr(output, "List after pop from empty: (nil)") != NULL) {
+    if (strstr(output, "List after pop from empty: (nil)") != NULL || strstr(output, "List after pop from empty: 0x0") != NULL) {
         if (mode == SHOW_ALL) printf("Test 3 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_pop_front:\n");

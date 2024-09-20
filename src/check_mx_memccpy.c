@@ -57,7 +57,7 @@ void check_mx_memccpy(void) {
 
     // Тест 2: Копирование строки без символа остановки
     capture_output(output, sizeof(output), test_case_2);
-    if (strstr(output, "Destination: 'Goodbye'") && strstr(output, "Return value: (nil)")) {
+    if (strstr(output, "Destination: 'Goodbye'") && (strstr(output, "Return value: (nil)") || strstr(output, "Return value: 0x0"))) {
         if (mode == SHOW_ALL) printf("Test 2 passed\n");
     } else {
         if (!is_print) printf("check_mx_memccpy:\n");
@@ -81,7 +81,7 @@ void check_mx_memccpy(void) {
 
     // Тест 4: Копирование с NULL
     capture_output(output, sizeof(output), test_case_4);
-    if (strstr(output, "Return value: (nil)")) {  // Ожидаем, что результат будет NULL
+    if (strstr(output, "Return value: (nil)") || strstr(output, "Return value: 0x0")) {  // Ожидаем, что результат будет NULL
         if (mode == SHOW_ALL) printf("Test 4 passed\n");
     } else {
         if (!is_print) printf("check_mx_memccpy:\n");
