@@ -30,7 +30,7 @@ static void test_case_4(void) {
 // Основная функция для проверки mx_swap_char
 void check_mx_swap_char(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -47,7 +47,7 @@ void check_mx_swap_char(void) {
         printf("Test 1 failed: Expected 'Result: NOE', got '%s'\n", output);
         
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -60,7 +60,7 @@ void check_mx_swap_char(void) {
         printf("Test 2 failed: Expected 'Result: NEO', got '%s'\n", output);
         
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -73,7 +73,7 @@ void check_mx_swap_char(void) {
         printf("Test 3 failed: Expected 'Result: ', got '%s'\n", output);
         
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -86,7 +86,7 @@ void check_mx_swap_char(void) {
         printf("Test 4 failed: Expected 'Result: No crash on NULL pointers', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

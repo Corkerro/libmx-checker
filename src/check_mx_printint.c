@@ -19,7 +19,7 @@ static void test_case_4(void) {
 
 void check_mx_printint(void) {
     char output[50];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -36,7 +36,7 @@ void check_mx_printint(void) {
         printf("Test 1 failed: Expected '25', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -49,7 +49,7 @@ void check_mx_printint(void) {
         printf("Test 2 failed: Expected '-10', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -62,7 +62,7 @@ void check_mx_printint(void) {
         printf("Test 3 failed: Expected '2147483647', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -75,7 +75,7 @@ void check_mx_printint(void) {
         printf("Test 4 failed: Expected '-2147483648', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

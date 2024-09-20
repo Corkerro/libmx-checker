@@ -48,7 +48,7 @@ static void test_case_3(void) {
 // Основная функция для проверки
 void check_mx_pop_front(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -64,7 +64,7 @@ void check_mx_pop_front(void) {
         if (is_print == 0) printf("check_mx_pop_front:\n");
         printf("Test 1 failed: Expected 'List after pop: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -76,7 +76,7 @@ void check_mx_pop_front(void) {
         if (is_print == 0) printf("check_mx_pop_front:\n");
         printf("Test 2 failed: Expected 'First node data after pop: 84', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -88,7 +88,7 @@ void check_mx_pop_front(void) {
         if (is_print == 0) printf("check_mx_pop_front:\n");
         printf("Test 3 failed: Expected 'List after pop from empty: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

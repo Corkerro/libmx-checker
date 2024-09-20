@@ -31,7 +31,7 @@ static unsigned long test_case_7(void) {
 
 void check_mx_hex_to_nbr(void) {
     unsigned long result;
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -48,7 +48,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 1 failed: Expected '196', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -61,7 +61,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 2 failed: Expected '64222', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -74,7 +74,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 3 failed: Expected '281474976710655', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -87,7 +87,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 4 failed: Expected '0', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -100,7 +100,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 5 failed: Expected '0', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -113,7 +113,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 6 failed: Expected '26', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -126,7 +126,7 @@ void check_mx_hex_to_nbr(void) {
         printf("Test 7 failed: Expected '1194684', got '%lu'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

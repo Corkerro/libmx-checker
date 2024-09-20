@@ -28,7 +28,7 @@ static int test_case_4(void) {
 void check_mx_strlen(void) {
     int result;
     int expected;
-    int loc_error_count = 0;
+
     int is_print = 0;
 
 
@@ -47,7 +47,7 @@ void check_mx_strlen(void) {
         printf("Test 1 failed: Expected %d, got %d\n", expected, result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     // Тест 2
@@ -60,7 +60,7 @@ void check_mx_strlen(void) {
         printf("Test 2 failed: Expected %d, got %d\n", expected, result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -74,7 +74,7 @@ void check_mx_strlen(void) {
         printf("Test 3 failed: Expected %d, got %d\n", expected, result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -88,7 +88,7 @@ void check_mx_strlen(void) {
         printf("Test 4 failed: Expected %d, got %d\n", expected, result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

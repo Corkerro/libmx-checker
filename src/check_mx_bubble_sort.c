@@ -45,7 +45,7 @@ static void test_case_4(void) {
 // Основная функция для проверки mx_bubble_sort
 void check_mx_bubble_sort(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -61,7 +61,7 @@ void check_mx_bubble_sort(void) {
         printf("Test 1 failed: Expected 'Number of swaps: 3\nSorted array: abc def ghi xyz ', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -73,7 +73,7 @@ void check_mx_bubble_sort(void) {
         printf("Test 2 failed: Expected 'Number of swaps: 2\nSorted array: a abc acb ', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -85,7 +85,7 @@ void check_mx_bubble_sort(void) {
         printf("Test 3 failed: Expected 'Number of swaps: 1\nSorted array: a abc ', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -97,7 +97,7 @@ void check_mx_bubble_sort(void) {
         printf("Test 4 failed: Expected 'Number of swaps: 0\nSorted array: a b c d e f ', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

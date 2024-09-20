@@ -59,7 +59,7 @@ static void test_case_5(void) {
 // Основная функция для проверки
 void check_mx_read_line(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -75,7 +75,7 @@ void check_mx_read_line(void) {
         if (!is_print) printf("check_mx_read_line:\n");
         printf("Test 1 failed: Expected 'Result: 8, Line: 'FADE IN:'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -87,7 +87,7 @@ void check_mx_read_line(void) {
         if (!is_print) printf("check_mx_read_line:\n");
         printf("Test 2 failed: Expected 'Result: 34, Line: '\nON COMPUTER SCREEN\n\nso close it h'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -99,7 +99,7 @@ void check_mx_read_line(void) {
         if (!is_print) printf("check_mx_read_line:\n");
         printf("Test 3 failed: Expected 'Result: 15, Line: 's no boundaries'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -111,7 +111,7 @@ void check_mx_read_line(void) {
         if (!is_print) printf("check_mx_read_line:\n");
         printf("Test 4 failed: Expected 'Result: 0, Line: '''', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -123,7 +123,7 @@ void check_mx_read_line(void) {
         if (!is_print) printf("check_mx_read_line:\n");
         printf("Test 5 failed: Expected 'Result: -2', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

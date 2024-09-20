@@ -34,7 +34,7 @@ static int test_case_6(void) {
 void check_mx_get_char_index(void) {
     int result;
     int expected;
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -51,7 +51,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 1 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -64,7 +64,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 2 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -77,7 +77,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 3 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -90,7 +90,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 4 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -103,7 +103,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 5 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -116,7 +116,7 @@ void check_mx_get_char_index(void) {
         if (is_print == 0) printf("check_mx_get_char_index:\n");
         printf("Test 6 failed: Expected %d, got %d\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

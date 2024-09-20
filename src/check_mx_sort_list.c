@@ -56,7 +56,7 @@ static void test_case_3(void) {
 // Основная функция для проверки
 void check_mx_sort_list(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -72,7 +72,7 @@ void check_mx_sort_list(void) {
         if (is_print == 0) printf("check_mx_sort_list:\n");
         printf("Test 1 failed: Expected 'Sorted empty list: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -84,7 +84,7 @@ void check_mx_sort_list(void) {
         if (is_print == 0) printf("check_mx_sort_list:\n");
         printf("Test 2 failed: Expected 'Sorted list with one element: 42', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -96,7 +96,7 @@ void check_mx_sort_list(void) {
         if (is_print == 0) printf("check_mx_sort_list:\n");
         printf("Test 3 failed: Expected 'Sorted list with multiple elements: 30 40 50', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

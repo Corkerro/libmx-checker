@@ -28,7 +28,7 @@ static char *test_case_5(void) {
 void check_mx_itoa(void) {
     char *expected;
     char *result;
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -45,7 +45,7 @@ void check_mx_itoa(void) {
         if (is_print == 0) printf("check_mx_itoa:\n");
         printf("Test 1 failed: Expected \"%s\", got \"%s\"\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -59,7 +59,7 @@ void check_mx_itoa(void) {
         if (is_print == 0) printf("check_mx_itoa:\n");
         printf("Test 2 failed: Expected \"%s\", got \"%s\"\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -73,7 +73,7 @@ void check_mx_itoa(void) {
         if (is_print == 0) printf("check_mx_itoa:\n");
         printf("Test 3 failed: Expected \"%s\", got \"%s\"\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -87,7 +87,7 @@ void check_mx_itoa(void) {
         if (is_print == 0) printf("check_mx_itoa:\n");
         printf("Test 4 failed: Expected \"%s\", got \"%s\"\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -101,7 +101,7 @@ void check_mx_itoa(void) {
         if (is_print == 0) printf("check_mx_itoa:\n");
         printf("Test 5 failed: Expected \"%s\", got \"%s\"\n", expected, result);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);

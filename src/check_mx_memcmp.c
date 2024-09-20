@@ -35,7 +35,7 @@ static void test_case_4(void) {
 // Основная функция для проверки mx_memcmp
 void check_mx_memcmp(void) {
     char output[200];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -51,7 +51,7 @@ void check_mx_memcmp(void) {
         if (!is_print) printf("check_mx_memcmp:\n");
         printf("Test 1 failed: Expected result 0, got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -63,7 +63,7 @@ void check_mx_memcmp(void) {
         if (!is_print) printf("check_mx_memcmp:\n");
         printf("Test 2 failed: Expected result -12, got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -75,7 +75,7 @@ void check_mx_memcmp(void) {
         if (!is_print) printf("check_mx_memcmp:\n");
         printf("Test 3 failed: Expected negative result, got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -87,7 +87,7 @@ void check_mx_memcmp(void) {
         if (!is_print) printf("check_mx_memcmp:\n");
         printf("Test 4 failed: Expected result 0, got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

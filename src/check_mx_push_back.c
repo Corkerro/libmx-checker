@@ -40,7 +40,7 @@ static void test_case_3(void) {
 // Основная функция для проверки
 void check_mx_push_back(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -56,7 +56,7 @@ void check_mx_push_back(void) {
         if (is_print == 0) printf("check_mx_push_back:\n");
         printf("Test 1 failed: Expected 'First node data: 42, Next node: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -68,7 +68,7 @@ void check_mx_push_back(void) {
         if (is_print == 0) printf("check_mx_push_back:\n");
         printf("Test 2 failed: Expected 'First node data: 42, Second node data: 84', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -80,7 +80,7 @@ void check_mx_push_back(void) {
         if (is_print == 0) printf("check_mx_push_back:\n");
         printf("Test 3 failed: Expected 'First node data: 1, Second node data: 2, Third node data: 3', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

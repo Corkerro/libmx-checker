@@ -75,7 +75,7 @@ static void test_case_6(void) {
 // Основная функция для проверки
 void check_mx_strsplit(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -92,7 +92,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 1 failed: Expected 'Good bye,', 'Mr.', 'Anderson.', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -105,7 +105,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 2 failed: Expected 'Knock,', 'knock,', 'Neo.', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -118,7 +118,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 3 failed: Expected 'NoDelimitersHere', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -131,7 +131,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 4 failed: Expected '[]', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -144,7 +144,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 5 failed: Expected '[]', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -157,7 +157,7 @@ void check_mx_strsplit(void) {
         if (is_print == 0) printf("check_mx_strsplit:\n");
         printf("Test 6 failed: Expected 'Result: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

@@ -15,7 +15,7 @@ static void test_case_3(void) {
 
 void check_mx_print_unicode(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -32,7 +32,7 @@ void check_mx_print_unicode(void) {
         printf("Test 1 failed: Expected 'α', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -45,7 +45,7 @@ void check_mx_print_unicode(void) {
         printf("Test 2 failed: Expected '😊', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -58,7 +58,7 @@ void check_mx_print_unicode(void) {
         printf("Test 3 failed: Expected '<space>', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

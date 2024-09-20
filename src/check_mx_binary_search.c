@@ -41,7 +41,7 @@ static void test_case_5(void) {
 
 void check_mx_binary_search(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -58,7 +58,7 @@ void check_mx_binary_search(void) {
         printf("Test 1 failed: Expected 'Result: 3, Count: 3', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -71,7 +71,7 @@ void check_mx_binary_search(void) {
         printf("Test 2 failed: Expected 'Result: 2, Count: 1', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -84,7 +84,7 @@ void check_mx_binary_search(void) {
         printf("Test 3 failed: Expected 'Result: -1, Count: 0', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -97,7 +97,7 @@ void check_mx_binary_search(void) {
         printf("Test 4 failed: Expected 'Result: 4, Count: 2', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     // Тест 5
@@ -109,7 +109,7 @@ void check_mx_binary_search(void) {
         printf("Test 5 failed: Expected 'Result: 0, Count: 2', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

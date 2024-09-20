@@ -42,7 +42,7 @@ static double test_case_10(void) {
 }
 
 void check_mx_pow(void) {
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -58,7 +58,7 @@ void check_mx_pow(void) {
         printf("Test 1 failed: Expected '8.0', got '%f'\n", test_case_1());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -70,7 +70,7 @@ void check_mx_pow(void) {
         printf("Test 2 failed: Expected '1.0', got '%f'\n", test_case_2());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -82,7 +82,7 @@ void check_mx_pow(void) {
         printf("Test 3 failed: Expected '0.0', got '%f'\n", test_case_3());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -94,7 +94,7 @@ void check_mx_pow(void) {
         printf("Test 4 failed: Expected '16.0', got '%f'\n", test_case_4());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -106,7 +106,7 @@ void check_mx_pow(void) {
         printf("Test 5 failed: Expected '-8.0', got '%f'\n", test_case_5());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -118,7 +118,7 @@ void check_mx_pow(void) {
         printf("Test 6 failed: Expected '1.0', got '%f'\n", test_case_6());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -130,7 +130,7 @@ void check_mx_pow(void) {
         printf("Test 7 failed: Expected '1.0', got '%f'\n", test_case_7());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -142,7 +142,7 @@ void check_mx_pow(void) {
         printf("Test 8 failed: Expected '3.0', got '%f'\n", test_case_8());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -154,7 +154,7 @@ void check_mx_pow(void) {
         printf("Test 9 failed: Expected '-125.0', got '%f'\n", test_case_9());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -166,7 +166,7 @@ void check_mx_pow(void) {
         printf("Test 10 failed: Expected '15.625', got '%f'\n", test_case_10());
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

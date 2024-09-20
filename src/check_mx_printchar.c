@@ -14,7 +14,7 @@ static void test_case_3(void) {
 
 void check_mx_printchar(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -31,7 +31,7 @@ void check_mx_printchar(void) {
         printf("Test 1 failed: Expected 'A', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -44,7 +44,7 @@ void check_mx_printchar(void) {
         printf("Test 2 failed: Expected '<newline>', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -57,7 +57,7 @@ void check_mx_printchar(void) {
         printf("Test 3 failed: Expected '<space>', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

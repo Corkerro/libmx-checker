@@ -32,7 +32,7 @@ static void test_case_2(void) {
 // Основная функция для проверки mx_quicksort
 void check_mx_quicksort(void) {
     char output[200];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -49,7 +49,7 @@ void check_mx_quicksort(void) {
         printf("Test 1 failed: Expected 'Number of swaps: 2\nSorted array: Raphael Leonardo Donatello Michelangelo \n', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -62,7 +62,7 @@ void check_mx_quicksort(void) {
         printf("Test 2 failed: Expected 'Number of swaps: 3\nSorted array: DMC Jessica Dr Brown Einstein Biff Tannen Clint Eastwood \n', got '%s'\n", output);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

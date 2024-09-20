@@ -33,7 +33,7 @@ static void test_case_5(void) {
 // Основная функция для проверки
 void check_mx_memrchr(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -49,7 +49,7 @@ void check_mx_memrchr(void) {
         if (!is_print) printf("check_mx_memrchr:\n");
         printf("Test 1 failed: Expected 'Result: 'ity'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -61,7 +61,7 @@ void check_mx_memrchr(void) {
         if (!is_print) printf("check_mx_memrchr:\n");
         printf("Test 2 failed: Expected 'Result: 'NULL'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -73,7 +73,7 @@ void check_mx_memrchr(void) {
         if (!is_print) printf("check_mx_memrchr:\n");
         printf("Test 3 failed: Expected 'Result: 'na'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -85,7 +85,7 @@ void check_mx_memrchr(void) {
         if (!is_print) printf("check_mx_memrchr:\n");
         printf("Test 4 failed: Expected 'Result: 'apple'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -97,7 +97,7 @@ void check_mx_memrchr(void) {
         if (!is_print) printf("check_mx_memrchr:\n");
         printf("Test 5 failed: Expected 'Result: 'NULL'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

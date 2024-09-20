@@ -37,7 +37,7 @@ static void test_case_3(void) {
 // Основная функция для проверки
 void check_mx_list_size(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -53,7 +53,7 @@ void check_mx_list_size(void) {
         if (is_print == 0) printf("check_mx_list_size:\n");
         printf("Test 1 failed: Expected 'Size of empty list: 0', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -65,7 +65,7 @@ void check_mx_list_size(void) {
         if (is_print == 0) printf("check_mx_list_size:\n");
         printf("Test 2 failed: Expected 'Size of list with one node: 1', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -77,7 +77,7 @@ void check_mx_list_size(void) {
         if (is_print == 0) printf("check_mx_list_size:\n");
         printf("Test 3 failed: Expected 'Size of list with two nodes: 2', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

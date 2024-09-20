@@ -41,7 +41,7 @@ static void test_case_5(void) {
 // Основная функция для проверки
 void check_mx_memmove(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -57,7 +57,7 @@ void check_mx_memmove(void) {
         if (!is_print) printf("check_mx_memmove:\n");
         printf("Test 1 failed: Expected 'Result: 'Hello, world!'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -69,7 +69,7 @@ void check_mx_memmove(void) {
         if (!is_print) printf("check_mx_memmove:\n");
         printf("Test 2 failed: Expected 'Result: 'Hello, Hello!'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -81,7 +81,7 @@ void check_mx_memmove(void) {
         if (!is_print) printf("check_mx_memmove:\n");
         printf("Test 3 failed: Expected 'Result: 'world!world!'', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -93,7 +93,7 @@ void check_mx_memmove(void) {
         if (!is_print) printf("check_mx_memmove:\n");
         printf("Test 4 failed: Expected 'Result: ''', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -105,7 +105,7 @@ void check_mx_memmove(void) {
         if (!is_print) printf("check_mx_memmove:\n");
         printf("Test 5 failed: Expected 'Result: ''', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

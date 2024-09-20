@@ -18,7 +18,7 @@ static void test_case_2(void) {
 // Основная функция для проверки
 void check_mx_strdel(void) {
     char output[100];
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -34,7 +34,7 @@ void check_mx_strdel(void) {
         if (is_print == 0) printf("check_mx_strdel:\n");
         printf("Test 1 failed: Expected 'Result: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 
@@ -46,7 +46,7 @@ void check_mx_strdel(void) {
         if (is_print == 0) printf("check_mx_strdel:\n");
         printf("Test 2 failed: Expected 'Result: (nil)', got '%s'\n", output);
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
 

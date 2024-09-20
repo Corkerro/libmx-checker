@@ -35,7 +35,7 @@ static char *test_case_8(void) {
 
 void check_mx_nbr_to_hex(void) {
     char *result;
-    int loc_error_count = 0;
+
     int is_print = 0;
 
     if (mode == SHOW_ALL) {
@@ -52,7 +52,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 1 failed: Expected '34', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);  // Не забываем освободить выделенную память
@@ -66,7 +66,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 2 failed: Expected '3e8', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -80,7 +80,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 3 failed: Expected 'ff', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -94,7 +94,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 4 failed: Expected '10', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -108,7 +108,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 5 failed: Expected '0', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -122,7 +122,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 6 failed: Expected '1000', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -136,7 +136,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 7 failed: Expected '1e240', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
@@ -150,7 +150,7 @@ void check_mx_nbr_to_hex(void) {
         printf("Test 8 failed: Expected 'ffffffff', got '%s'\n", result);
 
         error_count++;
-        loc_error_count++;
+
         is_print = 1;
     }
     free(result);
