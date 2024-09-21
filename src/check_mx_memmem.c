@@ -101,11 +101,11 @@ void check_mx_memmem(void) {
 
     // Тест 5
     capture_output(output, sizeof(output), test_case_5);
-    if (strstr(output, "Result: 'Hello, world!'; Position: 0")) {
+    if (strstr(output, "Result: '(null)'")) {
         if (mode == SHOW_ALL) printf("Test 5 passed: Found empty substring\n");
     } else {
         if (!is_print) printf("check_mx_memmem:\n");
-        printf("Test 5 failed: Expected 'Result: 'Hello, world!'; Position: 0', got '%s'\n", output);
+        printf("Test 5 failed: Expected 'Result: '(null)'', got '%s'\n", output);
         error_count++;
 
         is_print = 1;

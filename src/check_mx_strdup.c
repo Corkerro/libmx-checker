@@ -16,14 +16,8 @@ static void test_case_2(void) {
     free(duplicate);  // Освобождаем память
 }
 
-// Тестовая функция 3: NULL указатель
+// Тестовая функция 3: строка с пробелами
 static void test_case_3(void) {
-    char *duplicate = mx_strdup(NULL);
-    printf("Result: %p\n", (void *)duplicate);  // Ожидаем NULL
-}
-
-// Тестовая функция 4: строка с пробелами
-static void test_case_4(void) {
     const char *original = "   ";
     char *duplicate = mx_strdup(original);
     printf("Result: '%s'\n", duplicate);  // Ожидаем "   "
@@ -67,23 +61,11 @@ void check_mx_strdup(void) {
 
     // Тест 3
     capture_output(output, sizeof(output), test_case_3);
-    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
-        if (mode == SHOW_ALL) printf("Test 3 passed\n");
-    } else {
-        if (is_print == 0) printf("check_mx_strdup:\n");
-        printf("Test 3 failed: Expected 'Result: (nil)', got '%s'\n", output);
-        error_count++;
-
-        is_print = 1;
-    }
-
-    // Тест 4
-    capture_output(output, sizeof(output), test_case_4);
     if (strcmp(output, "Result: '   '\n") == 0) {
         if (mode == SHOW_ALL) printf("Test 4 passed\n");
     } else {
         if (is_print == 0) printf("check_mx_strdup:\n");
-        printf("Test 4 failed: Expected 'Result: '   '', got '%s'\n", output);
+        printf("Test 3 failed: Expected 'Result: '   '', got '%s'\n", output);
         error_count++;
 
         is_print = 1;

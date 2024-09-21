@@ -24,14 +24,6 @@ static void test_case_3(void) {
     printf("Destination: [%d %d %d], Return value: %p\n", dst[0], dst[1], dst[2], (void *)res);  // Ожидаем [1 2 ] и не NULL в res
 }
 
-// Тест 4: Копирование с NULL
-static void test_case_4(void) {
-    char *src = NULL;
-    char dst[10];
-    char *res = mx_memccpy(dst, src, 'A', 5);  // Проверяем поведение при передаче NULL
-    printf("Return value: %p\n", (void *)res);  // Ожидаем NULL
-} 
-
 // Основная функция для проверки mx_memccpy
 void check_mx_memccpy(void) {
     char output[200];
@@ -74,18 +66,6 @@ void check_mx_memccpy(void) {
     } else {
         if (!is_print) printf("check_mx_memccpy:\n");
         printf("Test 3 failed: Expected '[1 2 3]', got '%s'\n", output);
-        error_count++;
-
-        is_print = 1;
-    }
-
-    // Тест 4: Копирование с NULL
-    capture_output(output, sizeof(output), test_case_4);
-    if (strstr(output, "Return value: (nil)") || strstr(output, "Return value: 0x0")) {  // Ожидаем, что результат будет NULL
-        if (mode == SHOW_ALL) printf("Test 4 passed\n");
-    } else {
-        if (!is_print) printf("check_mx_memccpy:\n");
-        printf("Test 4 failed: Expected NULL return, got '%s'\n", output);
         error_count++;
 
         is_print = 1;

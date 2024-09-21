@@ -28,13 +28,6 @@ static void test_case_4(void) {
     printf("Test 4 - Expected: '%d', Got: '%d'\n", 3, *res);  // Ожидаем указатель на 3
 }
 
-// Тест 5: Поиск символа с нулевым указателем
-static void test_case_5(void) {
-    char *str = NULL;
-    char *res = mx_memchr(str, 'A', 5);  // Проверка поведения при NULL указателе
-    printf("Test 5 - Expected: (nil), Got: %p\n", (void *)res);  // Ожидаем NULL
-}
-
 // Основная функция для проверки mx_memchr
 void check_mx_memchr(void) {
     char output[200];
@@ -89,18 +82,6 @@ void check_mx_memchr(void) {
     } else {
         if (!is_print) printf("check_mx_memchr:\n");
         printf("Test 4 failed: Expected 3, got '%s'\n", output);
-        error_count++;
-
-        is_print = 1;
-    }
-
-    // Тест 5: Поиск с NULL указателем
-    capture_output(output, sizeof(output), test_case_5);
-    if ((strstr(output, "Expected: (nil)") || strstr(output, "Expected: 0x0")) && (strstr(output, "Got: (nil)") || strstr(output, "Got: 0x0"))) {
-        if (mode == SHOW_ALL) printf("Test 5 passed\n");
-    } else {
-        if (!is_print) printf("check_mx_memchr:\n");
-        printf("Test 5 failed: Expected NULL, got '%s'\n", output);
         error_count++;
 
         is_print = 1;

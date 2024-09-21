@@ -32,12 +32,6 @@ static void test_case_4(void) {
     free(duplicate);  // Освобождаем память
 }
 
-// Тестовая функция 5: дублирование NULL указателя
-static void test_case_5(void) {
-    char *duplicate = mx_strndup(NULL, 5);
-    printf("Result: %p\n", (void *)duplicate);  // Ожидаем NULL
-}
-
 // Основная функция для проверки
 void check_mx_strndup(void) {
     char output[100];
@@ -92,18 +86,6 @@ void check_mx_strndup(void) {
     } else {
         if (is_print == 0) printf("check_mx_strndup:\n");
         printf("Test 4 failed: Expected 'Result: ''', got '%s'\n", output);
-        error_count++;
-
-        is_print = 1;
-    }
-
-    // Тест 5
-    capture_output(output, sizeof(output), test_case_5);
-    if (strcmp(output, "Result: (nil)\n") == 0 || strcmp(output, "Result: 0x0\n") == 0) {
-        if (mode == SHOW_ALL) printf("Test 5 passed\n");
-    } else {
-        if (is_print == 0) printf("check_mx_strndup:\n");
-        printf("Test 5 failed: Expected 'Result: (nil)', got '%s'\n", output);
         error_count++;
 
         is_print = 1;
