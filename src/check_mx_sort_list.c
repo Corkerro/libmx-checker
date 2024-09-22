@@ -2,7 +2,7 @@
 
 // Сравнительная функция для сортировки
 static bool compare_ints(void *a, void *b) {
-    return (*(int *)a > *(int *)b);
+    return (*(int *)a < *(int *)b);
 }
 
 // Тестовая функция 1: сортировка пустого списка
