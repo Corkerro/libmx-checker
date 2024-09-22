@@ -55,7 +55,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);  // Не забываем освободить выделенную память
 
     // Тест 2: Проверяем 1000
     result = test_case_2();
@@ -69,7 +68,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 3: Проверяем 255
     result = test_case_3();
@@ -83,7 +81,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 4: Проверяем 16
     result = test_case_4();
@@ -97,7 +94,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 5: Проверяем 0
     result = test_case_5();
@@ -111,7 +107,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 6: Проверяем 4096
     result = test_case_6();
@@ -125,7 +120,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 7: Проверяем 123456
     result = test_case_7();
@@ -139,7 +133,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     // Тест 8: Проверяем максимальное значение для unsigned long
     result = test_case_8();
@@ -153,7 +146,6 @@ void check_mx_nbr_to_hex(void) {
 
         is_print = 1;
     }
-    free(result);
 
     if (is_print) printf("\n");
 }
